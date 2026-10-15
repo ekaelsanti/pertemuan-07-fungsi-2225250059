@@ -1,0 +1,19 @@
+# Latihan 4: Fungsi Mengembalikan Banyak Nilai (Minimum, Maksimum, Rata-rata)
+def statistik(data):
+    total = 0
+    minimum = data[0]
+    maksimum = data[0]
+
+    for x in data:
+        total += x
+        if x < minimum:
+            minimum = x
+        if x > maksimum:
+            maksimum = x
+
+    rata = total / len(data)
+    return minimum, maksimum, rata
+
+# Pengujian dengan data contoh
+mn, mx, rt = statistik([70, 80, 65, 90, 75])
+print(f"Min: {mn}, Max: {mx}, Rata-rata: {rt}")
